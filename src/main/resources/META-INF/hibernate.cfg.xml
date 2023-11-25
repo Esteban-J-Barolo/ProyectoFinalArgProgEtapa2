@@ -31,6 +31,7 @@
         <property name="hbm2ddl.auto">update</property>
         
         <mapping class="com.proyectofinalargprogetapa2.model.Cliente" />
+        <mapping class="com.proyectofinalargprogetapa2.model.Orden" />
 
        <!-- <mapping resource="Factura.hbm.xml" /> -->
     </session-factory>
