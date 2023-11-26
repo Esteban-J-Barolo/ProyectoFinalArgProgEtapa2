@@ -22,13 +22,16 @@ public class Orden {
     @ManyToOne
     private Cliente cliente;
     
-    private Integer categoria;
-    private Integer tecnico;
+    @ManyToOne
+    private Categoria categoria;
+    
+    @ManyToOne
+    private Tecnico tecnico;
 
     public Orden() {
     }
 
-    public Orden(String descripcion, Float costo, Date fecha, Boolean estado, Cliente cliente, Integer categoria, Integer tecnico) {
+    public Orden(String descripcion, Float costo, Date fecha, Boolean estado, Cliente cliente, Categoria categoria, Tecnico tecnico) {
         this.descripcion = descripcion;
         this.costo = costo;
         this.fecha = fecha;
@@ -86,21 +89,23 @@ public class Orden {
         this.cliente = cliente;
     }
 
-    public Integer getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Integer categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
-    public Integer getTecnico() {
+    public Tecnico getTecnico() {
         return tecnico;
     }
 
-    public void setTecnico(Integer tecnico) {
+    public void setTecnico(Tecnico tecnico) {
         this.tecnico = tecnico;
     }
+
+   
     
     
     
