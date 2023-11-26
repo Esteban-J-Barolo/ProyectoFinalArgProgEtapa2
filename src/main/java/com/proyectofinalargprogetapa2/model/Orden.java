@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Orden {
@@ -16,7 +16,7 @@ public class Orden {
     
     private String descripcion;
     private Float costo;
-    private Date fecha;
+    private LocalDate fecha;
     private Boolean estado;
     
     @ManyToOne
@@ -31,7 +31,7 @@ public class Orden {
     public Orden() {
     }
 
-    public Orden(String descripcion, Float costo, Date fecha, Boolean estado, Cliente cliente, Categoria categoria, Tecnico tecnico) {
+    public Orden(String descripcion, Float costo, LocalDate fecha, Boolean estado, Cliente cliente, Categoria categoria, Tecnico tecnico) {
         this.descripcion = descripcion;
         this.costo = costo;
         this.fecha = fecha;
@@ -65,11 +65,11 @@ public class Orden {
         this.costo = costo;
     }
 
-    public Date getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
